@@ -1,0 +1,51 @@
+.ranking {
+    background-color: #242424;
+    width: calc(100% - 24px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+}
+
+.ranking .logo {
+    width: 60px;
+}
+
+
+.ranking h2 {
+    color: white;
+    margin: 8px;
+    margin-bottom: 0;
+}
+
+.rankings {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    width: 100%;
+    flex: 1;
+    align-items: center;
+    overflow: auto;
+}
+
+.rankings .ranking-item {
+    width: calc(95% - 24px);
+    padding: 12px;
+    border-radius: 18px;
+    background-color: #424242;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.ranking-item h3 {
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.ranking-item p {
+    margin: 0;
+    font-weight: 500;
+}

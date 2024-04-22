@@ -1,0 +1,28 @@
+.start {
+    background-color: #242424;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.start img {
+    width: 113px;
+}
+
+.start h1 {
+    color: white;
+    margin: 8px;
+    margin-bottom: 0;
+}
+
+.start p {
+    font-weight: 500;
+    color: #B3B3B3;
+    text-align: center;
+    margin: 12px;
+    margin-bottom: 18px;
+    font-size: 20px;
+}

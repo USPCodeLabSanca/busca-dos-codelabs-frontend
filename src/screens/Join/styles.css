@@ -1,0 +1,36 @@
+.join {
+    background-color: #242424;
+    width: calc(100% - 24px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.join img {
+    width: 34px;
+}
+
+.join h2 {
+    color: white;
+    margin: 8px;
+    margin-bottom: 0;
+}
+
+.join p {
+    font-weight: 500;
+    color: #B3B3B3;
+    text-align: center;
+    margin: 12px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.join form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    align-items: center;
+}

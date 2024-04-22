@@ -1,0 +1,74 @@
+.game {
+    background-color: #242424;
+    width: calc(100% - 24px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+}
+
+.game .logo {
+    width: 60px;
+}
+
+.game h2 {
+    color: white;
+    margin: 8px;
+    margin-bottom: 0;
+}
+
+.codelabs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    width: 100%;
+    flex: 1;
+    align-items: center;
+    overflow: auto;
+}
+
+.codelabs .codelab {
+    width: calc(95% - 24px);
+    padding: 12px;
+    border-radius: 18px;
+    background-color: #424242;
+    display: flex;
+}
+
+.codelabs .codelab img {
+    width: 60px;
+    height: fit-content;
+}
+
+.codelabs .codelab .codelab-infos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+}
+
+.codelabs .codelab .codelab-infos h3 {
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.codelabs .codelab .codelab-infos p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.codelab-collected {
+    color: white;
+}
+
+.codelab-not-collected {
+    color: #B9B9B9;
+}
+
+.loading-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
