@@ -33,7 +33,7 @@ function Qr() {
             collectCodelab(result.text);
           }
         }}
-        constraints={{ facingMode: "user" }}
+        constraints={{ facingMode: "environment" }}
         containerStyle={{ flex: 1, display: "flex", width: "100%" }}
         videoContainerStyle={{ flex: 1 }}
         videoStyle={{ objectFit: "cover" }}
