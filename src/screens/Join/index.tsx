@@ -30,7 +30,7 @@ function Join() {
 
   return (
     <div className="join">
-      <img alt="Codelab" src="https://i.imgur.com/LhdQTvl.png" />
+      <img alt="Codelab" src="https://i.imgur.com/NdcqCcB.png" />
       <h2>Entrar</h2>
       <p>
         Coloque seu nominho lindo e seu @ do telegra pra sabermos quem é você!

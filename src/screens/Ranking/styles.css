@@ -1,22 +1,33 @@
 .ranking {
-    background-color: #242424;
-    width: calc(100% - 24px);
+    background-image: url(../../assets/bg.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.ranking-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+    flex: 1;
     padding: 12px;
 }
 
 .ranking .logo {
-    width: 60px;
+    width: 50px;
 }
-
 
 .ranking h2 {
     color: white;
     margin: 8px;
     margin-bottom: 0;
+    font-size: 14px;
 }
 
 .rankings {
@@ -33,7 +44,7 @@
 .rankings .ranking-item {
     width: calc(95% - 24px);
     padding: 12px;
-    border-radius: 18px;
+    border-radius: 4px;
     background-color: #424242;
     display: flex;
     flex-direction: column;
@@ -43,9 +54,11 @@
 .ranking-item h3 {
     margin: 0;
     margin-bottom: 6px;
+    font-size: 14px;
 }
 
 .ranking-item p {
     margin: 0;
     font-weight: 500;
+    font-size: 13px;
 }

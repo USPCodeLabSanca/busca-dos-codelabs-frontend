@@ -4,6 +4,7 @@ interface Codelab {
   name: string;
   description: string;
   image: string;
+  background: string;
 }
 
 export default Codelab;

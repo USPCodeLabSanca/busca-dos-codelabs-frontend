@@ -24,25 +24,27 @@ function Qr() {
 
   return (
     <div className="qr">
-      <QrReader
-        onResult={(result, error) => {
-          if (result && !loading) {
-            // @ts-ignore
-            console.log(result.text);
-            // @ts-ignore
-            collectCodelab(result.text);
-          }
-        }}
-        constraints={{ facingMode: "environment" }}
-        containerStyle={{ flex: 1, display: "flex", width: "100%" }}
-        videoContainerStyle={{ flex: 1 }}
-        videoStyle={{ objectFit: "cover" }}
-      />
-      {loading && (
-        <div className="qr-loading-div">
-          <h2>Coletando..</h2>
-        </div>
-      )}
+      <div className="qr-container">
+        <QrReader
+          onResult={(result, error) => {
+            if (result && !loading) {
+              // @ts-ignore
+              console.log(result.text);
+              // @ts-ignore
+              collectCodelab(result.text);
+            }
+          }}
+          constraints={{ facingMode: "environment" }}
+          containerStyle={{ flex: 1, display: "flex", width: "100%" }}
+          videoContainerStyle={{ flex: 1 }}
+          videoStyle={{ objectFit: "cover" }}
+        />
+        {loading && (
+          <div className="qr-loading-div">
+            <h2>Coletando..</h2>
+          </div>
+        )}
+      </div>
       <GameNavigation />
     </div>
   );

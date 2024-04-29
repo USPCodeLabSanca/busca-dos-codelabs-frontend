@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./styles.css";
 import apiClient from "../../clients/apiClient";
-import Codelab from "../../types/Codelab";
 import GameNavigation from "../../components/GameNavigation";
 import User from "../../types/User";
 
@@ -26,29 +25,31 @@ function Ranking() {
 
   return (
     <div className="ranking">
-      <img
-        alt="Codelab"
-        className="logo"
-        src="https://i.imgur.com/LhdQTvl.png"
-      />
-      {loading ? (
-        <div className="loading-div">
-          <h2>Carregando</h2>
-        </div>
-      ) : null}
+      <div className="ranking-container">
+        <img
+          alt="Codelab"
+          className="logo"
+          src="https://i.imgur.com/NdcqCcB.png"
+        />
+        {loading ? (
+          <div className="loading-div">
+            <h2>Carregando</h2>
+          </div>
+        ) : null}
 
-      {!loading ? (
-        <div className="rankings">
-          {users.map((user) => {
-            return (
-              <div key={user.id} className={`ranking-item`}>
-                <h3>{user.name}</h3>
-                <p>{user.collectedCodelabsNumber} Codelabs Coletados</p>
-              </div>
-            );
-          })}
-        </div>
-      ) : null}
+        {!loading ? (
+          <div className="rankings">
+            {users.map((user) => {
+              return (
+                <div key={user.id} className={`ranking-item`}>
+                  <h3>{user.name}</h3>
+                  <p>{user.collectedCodelabsNumber} Codelabs Coletados</p>
+                </div>
+              );
+            })}
+          </div>
+        ) : null}
+      </div>
       <GameNavigation />
     </div>
   );

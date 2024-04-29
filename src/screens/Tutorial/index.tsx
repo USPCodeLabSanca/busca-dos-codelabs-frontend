@@ -66,7 +66,7 @@ function Tutorial() {
       <img
         alt="Codelab"
         className="logo"
-        src="https://i.imgur.com/LhdQTvl.png"
+        src="https://i.imgur.com/NdcqCcB.png"
       />
       <h1>Como funciona?</h1>
       {steps[step]}
