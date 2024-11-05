@@ -3,6 +3,7 @@ import "./styles.css";
 import apiClient from "../../clients/apiClient";
 import GameNavigation from "../../components/GameNavigation";
 import User from "../../types/User";
+import generateStringDateTime from "../../utils/generateStringDateTime";
 
 function Ranking() {
   const [users, setUsers] = useState<User[]>([]);
@@ -39,11 +40,21 @@ function Ranking() {
 
         {!loading ? (
           <div className="rankings">
-            {users.map((user) => {
+            {users.map((user, index) => {
               return (
-                <div key={user.id} className={`ranking-item`}>
+                <div
+                  key={user.id}
+                  style={{
+                    backgroundColor:
+                      index < 3 && user.collectedCodelabsNumber === 12
+                        ? "#418935"
+                        : "#474747",
+                  }}
+                  className={`ranking-item`}
+                >
                   <h3>{user.name}</h3>
                   <p>{user.collectedCodelabsNumber} Codelabs Coletados</p>
+                  <p>{generateStringDateTime(user.lastCollectedCodelabDate)}</p>
                 </div>
               );
             })}

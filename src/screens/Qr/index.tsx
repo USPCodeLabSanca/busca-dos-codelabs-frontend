@@ -6,6 +6,8 @@ import apiClient from "../../clients/apiClient";
 
 function Qr() {
   const [loading, setLoading] = useState(false);
+  const [isCollected, setIsCollected] = useState(false);
+  const [lastCollectedCodelab, setLastCollectedCodelab] = useState("");
 
   const collectCodelab = async (qrCode: string) => {
     if (loading) return;
@@ -13,7 +15,12 @@ function Qr() {
     console.log(loading);
     try {
       await apiClient.collectCodelab(qrCode);
+      setLastCollectedCodelab(qrCode);
       setLoading(false);
+      setIsCollected(true);
+      setTimeout(() => {
+        setIsCollected(false);
+      }, 2000);
     } catch (error) {
       // @ts-ignore
       alert(error!.error);
@@ -27,7 +34,8 @@ function Qr() {
       <div className="qr-container">
         <QrReader
           onResult={(result, error) => {
-            if (result && !loading) {
+            // @ts-ignore
+            if (result && !loading && lastCollectedCodelab !== result.text) {
               // @ts-ignore
               console.log(result.text);
               // @ts-ignore
@@ -42,6 +50,11 @@ function Qr() {
         {loading && (
           <div className="qr-loading-div">
             <h2>Coletando..</h2>
+          </div>
+        )}
+        {isCollected && (
+          <div className="qr-collected-div">
+            <h2>Codelab Coletado!</h2>
           </div>
         )}
       </div>
