@@ -1,21 +1,18 @@
 import "./styles.css";
 import GameNavigation from "../../components/GameNavigation";
 import { QrReader } from "react-qr-reader";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import apiClient from "../../clients/apiClient";
 
 function Qr() {
   const [loading, setLoading] = useState(false);
   const [isCollected, setIsCollected] = useState(false);
-  const [lastCollectedCodelab, setLastCollectedCodelab] = useState("");
 
   const collectCodelab = async (qrCode: string) => {
     if (loading) return;
     setLoading(true);
-    console.log(loading);
     try {
       await apiClient.collectCodelab(qrCode);
-      setLastCollectedCodelab(qrCode);
       setLoading(false);
       setIsCollected(true);
       setTimeout(() => {
@@ -33,13 +30,14 @@ function Qr() {
     <div className="qr">
       <div className="qr-container">
         <QrReader
-          onResult={(result, error) => {
-            // @ts-ignore
-            if (result && !loading && lastCollectedCodelab !== result.text) {
-              // @ts-ignore
-              console.log(result.text);
-              // @ts-ignore
-              collectCodelab(result.text);
+          onResult={(result, _, codeReader) => {
+            if (!(codeReader as any).processingScan && !!result) {
+              (codeReader as any).processingScan = true;
+              collectCodelab(result.getText());
+              setTimeout(
+                () => ((codeReader as any).processingScan = false),
+                7000
+              );
             }
           }}
           constraints={{ facingMode: "environment" }}
@@ -53,7 +51,7 @@ function Qr() {
           </div>
         )}
         {isCollected && (
-          <div className="qr-collected-div">
+          <div className="qr-loading-div">
             <h2>Codelab Coletado!</h2>
           </div>
         )}
