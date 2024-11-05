@@ -37,12 +37,12 @@ function Game() {
             <h2>Carregando</h2>
           </div>
         ) : (
-          <h2>{codelabs.length}/10 Codelabs Coletados</h2>
+          <h2>{codelabs.length}/12 Codelabs Coletados</h2>
         )}
 
         {!loading ? (
           <div className="codelabs">
-            {Array.from({ length: 10 }).map((_, index) => {
+            {Array.from({ length: 12 }).map((_, index) => {
               const codelabCollected = codelabs.find(
                 (codelab) => codelab.order === index + 1
               );

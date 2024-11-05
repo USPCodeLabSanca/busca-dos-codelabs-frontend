@@ -28,7 +28,10 @@ function Start() {
     <div className="start">
       <img alt="Codelab" src="https://i.imgur.com/NdcqCcB.png" />
       <h1>Caça aos Codelabs!</h1>
-      <p>Seja o primeiro a encontrar todos os Codelabs e ganhe um agradinho!</p>
+      <p>
+        Seja um dos primeiros a encontrar todos os Codelabs e ganhe um
+        agradinho!
+      </p>
       <Button width="80%" text="Iniciar" onClick={goToJoin} />
       <MadeBy />
     </div>

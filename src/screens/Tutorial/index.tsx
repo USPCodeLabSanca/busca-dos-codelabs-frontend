@@ -9,14 +9,14 @@ const step1 = (
     style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
   >
     <p>
-      Temos 10 codelabs espalhados no campus com um QR Code do lado. As três
+      Temos 12 codelabs espalhados no campus com um QR Code do lado. As três
       primeiras pessoas que fecharem sua pokedex de codelabs ganharão um
       presente misterioso do Codelab!
     </p>
     <img
       alt="Codelab"
       style={{ borderRadius: 18, margin: 12 }}
-      src="https://images.squarespace-cdn.com/content/5edb32112cb3cc498e15a24d/1592278746395-AEX09Z0GJDHC3AFLV7AL/Squareprint+93+Logo+final-01.png?content-type=image%2Fpng"
+      src="https://i.imgur.com/Ig1l0LM.png"
       width={200}
       height={200}
     />
