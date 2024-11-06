@@ -9,7 +9,7 @@ const step1 = (
     style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
   >
     <p>
-      Temos 12 codelabs espalhados no campus com um QR Code do lado. As três
+      Temos 12 codelabs espalhados no ICMC com um QR Code do lado. As três
       primeiras pessoas que fecharem sua pokedex de codelabs ganharão um
       presente misterioso do Codelab!
     </p>

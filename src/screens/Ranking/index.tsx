@@ -54,7 +54,11 @@ function Ranking() {
                 >
                   <h3>{user.name}</h3>
                   <p>{user.collectedCodelabsNumber} Codelabs Coletados</p>
-                  <p>{generateStringDateTime(user.lastCollectedCodelabDate)}</p>
+                  {user.lastCollectedCodelabDate && (
+                    <p>
+                      {generateStringDateTime(user.lastCollectedCodelabDate)}
+                    </p>
+                  )}
                 </div>
               );
             })}
